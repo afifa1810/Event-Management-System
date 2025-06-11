@@ -1,0 +1,443 @@
+﻿@page
+@model EventManagement.Pages.BridalShowerModel
+@{
+	ViewData["Title"] = "Bridal Shower Gallery!";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Gallery</title>
+   
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Raleway:wght@400;700&amp;display=swap" rel="stylesheet" />
+
+        <style>
+            body {
+                font-family: 'Raleway', sans-serif;
+                background-color: floralwhite;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Playfair Display', serif;
+            }
+
+            header {
+                position: relative;
+                z-index: 20;
+            }
+
+
+        .hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Align children horizontally */
+            gap: 50px; /* Add space between the image gallery and the heading */
+            color: white;
+            height: 80vh; /* Hero section height */
+            padding: 0 5%; /* Horizontal padding for spacing */
+            background-color: #f9f9f9; /* Light background for the section */
+        }
+
+
+        .image-gallery {
+            display: flex;
+            gap: 10px; /* Space between images */
+            z-index: 1; /* Keep images below text */
+        }
+
+        .gallery-image {
+            width: 350px; /* Adjust image width */
+            height: 400px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border: 5px solid white; /* White border around images */
+        }
+
+        .hero-heading {
+            flex-shrink: 0; /* Prevent heading from shrinking */
+            max-width: 30%; /* Limit heading width */
+            text-align: left; /* Align text to the left */
+            color: #2c3e50; /* Darker color for better readability */
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .image-center {
+            z-index: 2; /* Bring center image above others */
+            transform: translateY(-20px); /* Slightly lift the center image */
+        }
+
+        .image-left {
+            transform: translateX(-10px);
+            z-index: 1;
+        }
+
+        .image-right {
+            transform: translateX(10px);
+            z-index: 1;
+        }
+
+        .hero h1 {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .newbutton {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #939056;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+            .newbutton:hover {
+                background-color: #6b6836;
+                color: white;
+                transition: 0.3s ease;
+            }
+        .intro {
+            padding: 40px 110px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+            .intro h2 {
+                font-size: 2.5em;
+                margin-bottom: 15px;
+                color: #4a4a4a;
+            }
+
+            .intro p {
+                font-size: 1.2em;
+                line-height: 1.6;
+                color: #666;
+            }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .image-box {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            height: 350px;
+        }
+
+            .image-box img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+                transition: transform 0.4s ease-in-out;
+            }
+
+            .image-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            }
+
+                .image-box:hover img {
+                    transform: scale(1.1);
+                }
+        
+
+        .packages-section {
+            text-align: center;
+            background-color: #fff;
+            padding: 60px 20px;
+            position: relative;
+        }
+
+            .packages-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: inherit;
+                filter: blur(2px);
+                z-index: 1;
+            }
+
+            .packages-section h1 {
+                font-size: 2.8rem;
+                color: #6b6836;
+                position: relative;
+                z-index: 2;
+            }
+
+        .packages-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .package {
+                background-color: #b2ad77;
+            padding: 20px;
+            border-radius: 10px;        
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: left;
+        }
+
+            .package h2 {
+                font-size: 1.2rem;
+                color: white;
+                text-align:center;
+            }
+            .package h3{
+                font-size: 1.3rem;
+                color:white;
+                text-align: center;
+            }
+            .package ul {
+               list-style:disc;
+                padding: 0;
+            }
+
+                .package ul li {
+                    font-size: 0.8rem;
+                    color: floralwhite;
+                    margin: 5px 0;
+                    margin-bottom:10px;
+                }
+
+            .package .price {
+                display: block;
+                margin-top: 15px;
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: #6b6836;
+            }
+
+        .new-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px; /* Reduced padding to decrease height */
+            background-color: #e09f9f;
+            text-align: center;
+            flex-wrap: wrap;
+            border: 1px solid #6b6836;
+            margin: 0;
+            width: 100%; /* Ensure full width */
+            box-sizing: border-box;
+            min-height: 80px; /* Reduced minimum height */
+        }
+
+            .new-section .text-content {
+                flex: 1;
+                padding: 10px;
+            }
+
+                .new-section .text-content h1 {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: #f8f8f4;
+                    margin-bottom: 20px;
+                }
+
+                .new-section .text-content p {
+                    font-size: 1.2rem;
+                    line-height: 1.8;
+                    color: #f8f8f4;
+                    margin-bottom: 20px;
+                }
+
+            .new-section img {
+                flex: 1;
+                width: 100%;
+                max-width: 500px;
+                height: 600px;
+                border-radius: 8px;
+            }
+
+        .new-button {
+            padding: 10px 20px;
+            background-color: #f8f8f4;
+            color: #6b6836;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: #272619;
+        }
+        .price{
+            font-size:0.9rem;
+        }
+        .fade-in {
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Start slightly below */
+            transition: opacity 1.0s ease, transform 1.0s ease; /* Transition for opacity and position */
+        }
+
+            .fade-in.visible {
+                opacity: 1; /* Fully visible */
+                transform: translateY(0); /* Move to original position */
+            }
+    </style>
+</head>
+<body>
+
+    <br />
+    <br />
+    <br />
+    <div class="hero ">
+
+        <div class="image-gallery fade-in">
+            <img src="https://i.pinimg.com/736x/d3/e2/a6/d3e2a6ece5eada9f120321d01fd811c2.jpg" alt="Image 1" class="gallery-image image-left">
+            <img src="https://i.pinimg.com/736x/87/fb/09/87fb098683195097f522650ec06bda8a.jpg" alt="Image 2" class="gallery-image image-center">
+        </div>
+        <div class="hero-heading fade-in">
+            <h1>Bridal Shower</h1>
+            <p>Get Inspired</p>
+            <a asp-area="" asp-page="/Products/contactus" class="newbutton" style="
+                ">
+                BOOK NOW
+            </a>
+        </div>
+    </div>
+    <div class="packages-section">
+        <br />
+        <h1 class="text-2xl fade-in" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:1.2rem;letter-spacing:8px;font-weight:bold;">Our Packages</h1>
+        <br>
+        <div class="packages-container fade-in">
+            <div class="package">
+
+               
+                <h3>
+                    Basic Package – <span class="price">
+                        PKR 150,000
+                    </span>
+                </h3>
+                <ul>
+                    <li>Simple stage décor with fresh flowers</li>
+                    <li>Seating arrangement (floor cushions & round tables)</li>
+                    <li>Basic lighting setup</li>
+                    <li>Sound system with DJ</li>
+                    <li>One live performance (dhol or dance group)</li>
+                </ul>
+            </div>
+            <div class="package">
+               
+                <h3>
+                    Premium Package – <span class="price">
+                        PKR 300,000
+                    </span>
+                </h3>
+                <ul>
+                    <li>Themed stage décor with floral & LED backdrops</li>
+                    <li>Lounge-style seating with colorful cushions & low tables</li>
+                    <li>Professional lighting setup & dance floor</li>
+                    <li>DJ & live dhol performance</li>
+                    <li>Bridal Shower giveaways for guests</li>
+                    <li>Customized food stalls</li>
+                </ul>
+            </div>
+            <div class="package">
+                
+                <h3>
+                    Luxury Package – <span class="price">
+                        PKR 500,000
+                    </span>
+                </h3>
+                <ul>
+                    <li>Grand stage with floral chandeliers & royal setup</li>
+                    <li>VIP seating with themed furniture & customized Bridal shower corners</li>
+                    <li>High-end sound & LED dance floor</li>
+                    <li>Professional Mehndi artists for guests</li>
+                    <li>Celebrity guest appearance (optional)</li>
+                    <li>Customized buffet catering with live cooking stations</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="intro">
+        <br />
+        <br />
+
+        <h3 class="text-2xl fade-in" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:0.975rem;letter-spacing:8px;">
+            CELEBRATIONS!
+        </h3>
+        <h4 class="text-4xl mt-4 fade-in" style="color:#b2ad77;font-weight:200;letter-spacing:2px;font-size:2.0rem;">
+            "Bridal Shower"
+        </h4>
+        <br />
+        <hr class="fade-in" style="width: 2in; border-top: 2px solid black;margin:0 auto;">
+        <br />
+        <p class="fade-in" style="line-height: 2; font-size: 1.0rem;">
+            Explore the finest moments we’ve created!<br /> From luxurious weddings to breathtaking receptions, our gallery captures the essence of elegance and beauty.<br /> Be inspired by the magic we bring to every event.
+        </p>
+        <br /><br />
+        
+    </div>
+
+    <div class="gallery fade-in">
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/94/88/be/9488be4d805450de3c35c594973a2b09.jpg" alt="Wedding Image 1"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/bc/a6/11/bca61116622a0f8b5750f41d128ff819.jpg" alt="Wedding Image 2"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/a2/95/ba/a295ba427e34ad6a19de96edc8079ab6.jpg" alt="Wedding Image 3"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/55/aa/fe/55aafe59d1479e843901956f09b95346.jpg" alt="Wedding Image 4"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/a3/28/6d/a3286d091dccc169988e74db66099b63.jpg" alt="Wedding Image 5"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/4d/a4/4f/4da44f1349458d4d2f2fbe89c6f8b435.jpg" alt="Wedding Image 6"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/f1/26/b3/f126b3ba3ebeb30692a3c1d2fce906b5.jpg" alt="Wedding Image 7"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/64/04/b6/6404b64155dbd1eb2c5ad0c8e5d04be6.jpg" alt="Wedding Image 8"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/5f/f7/16/5ff7168eed2b47d9e2aa750f4c419fe9.jpg" alt="Wedding Image 9"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/dc/b5/33/dcb5338bb719f70c0da228d9641e043c.jpg" alt="Wedding Image 8"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/a0/6a/0a/a06a0ac48f9d00dad26d491da1288327.jpg" alt="Wedding Image 9"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/d8/e7/6c/d8e76c859130acd082c2550eb313f3e6.jpg" alt="Wedding Image 8"></div>
+    </div>
+    
+        <script>
+                   // Intersection Observer for fade-in effect
+                   document.addEventListener("DOMContentLoaded", function() {
+                       const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observerOptions = {
+                           root: null, // Use the viewport as the root
+                           threshold: 0.1 // Trigger when 10% of the element is visible
+                       };
+
+                       const observer = new IntersectionObserver((entries) => {
+                           entries.forEach(entry => {
+                               if (entry.isIntersecting) {
+                                   entry.target.classList.add('visible'); // Add visible class to trigger animation
+                                   observer.unobserve(entry.target); // Stop observing once it has been animated
+                               }
+                           });
+                       }, observerOptions);
+
+                       fadeInElements.forEach(element => {
+                           observer.observe(element); // Observe each fade-in element
+                       });
+                   });
+        </script>
+</body>
+</html>
+
+

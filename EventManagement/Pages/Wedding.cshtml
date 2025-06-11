@@ -1,0 +1,571 @@
+﻿@page
+@model EventManagement.Pages.WeddingModel
+@{
+	ViewData["Title"] = "Wedding";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>
+        Wedding &amp; Event Planning
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Raleway:wght@400;700&amp;display=swap" rel="stylesheet" />
+    
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        header{
+            position:relative;
+            z-index:20;
+        }
+       
+
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 90vh;
+            background: url('https://i.pinimg.com/736x/43/41/e1/4341e13265b54f20e48bd40dc66c7232.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff1ed;
+            margin-bottom: 40px;
+            overflow: hidden; /* Ensures content stays within bounds */
+        }
+
+            .hero-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: inherit; /* Use the same background image */
+                filter: blur(2px); /* Adjust the blur level */
+                z-index: 1; /* Place behind the text */
+            }
+
+            .hero-section * {
+                position: relative;
+                z-index: 2; /* Ensure text is above the blurred background */
+            }
+
+            .hero-section h1 {
+                font-size: 3.5rem;
+                font-weight: bold;
+                padding: 20px 40px;
+                border-radius: 10px;
+                letter-spacing:7px;
+            }
+
+        .main-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically center content */
+            align-items: center; /* Horizontally center content */
+            text-align: center; /* Center-align text */
+            height: 300px; /* Increase section height */
+            background-color:floralwhite;/* Section background color */
+            padding: 20px;
+        }
+
+            .main-section h1 {
+                font-size: 2.5rem; /* Larger heading size */
+                font-weight: bold;
+                color: #6b6836; /* White heading text */
+                margin: 0; /* Remove default margins */
+            }
+
+            .main-section p {
+                font-size: 1.2rem; /* Adjust paragraph font size */
+                color: #984747; /* White text for paragraph */
+                margin-top: 10px; /* Space below the heading */
+                max-width: 800px; /* Limit text width */
+                line-height: 1.8; /* Adjust line spacing */
+            }
+
+            .main-section hr {
+                width: 80%; /* Line width */
+                border: 1px solid #6b5636; /* Line color */
+                margin: 30px 0; /* Space above and below the line */
+            }
+
+            .main-section img {
+                width: 30%;
+                height: 450px;
+                object-fit: cover;
+                border-radius: 35px;
+                margin: 0px;
+                padding: 5px; /* Added padding for main-section images */
+            }
+
+        .mid-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px 10px;
+            flex-wrap: wrap;
+            background-color: floralwhite;
+            margin: 0;
+            border-radius: 10px;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+
+            .mid-section .content-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 60px; /* Increase the gap between text and image */
+                text-align: center;
+                background-color: floralwhite;;
+            }
+
+            .mid-section img {
+                margin-bottom: 20px; /* Add some margin to create space */
+            }
+
+            .mid-section img {
+                width: 100%;
+                max-width: 400px;
+                height: 400px;
+                padding: 0;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+
+            .mid-section .text-content {
+                max-width: 500px;
+                text-align: center;
+             
+            }
+
+                .mid-section .text-content h1 {
+                    font-size: 1.4rem;
+                    padding: 5px 10px;
+                    font-weight: bold;
+                    color: #6b6836;
+                    margin-bottom: 10px;
+                    letter-spacing:2px;
+                    
+                }
+
+                .mid-section .text-content p {
+                    font-size: 1.1rem;
+                    line-height: 1.4;
+                    color: #814b3e;
+                    margin-bottom: 20px;
+                    padding: 5px 40px;
+                }
+
+                .mid-section .text-content a {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: #814b3e;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    font-size: 0.9rem;
+                    transition: background-color 0.3s;
+                }
+
+                    .mid-section .text-content a:hover {
+                        background-color: #ae6e5e;
+                    }
+
+                    .mid-section .text-content a:hover {
+                        background-color: #a86655;
+                    }
+
+            .mid-section .button {
+                font-size: 1.2rem;
+                padding: 10px 20px;
+                background-color: #6b6836;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color:#814b3e;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            .button:hover {
+                background-color: #272619;
+            }
+
+        .decorative-line {
+            margin: 50px auto;
+            width: 80%;
+            height: 5px;
+            background-color: #6b6836;
+            border-radius: 3px;
+        }
+
+        .italic-text {
+            font-style: italic;
+            font-size: 2.0rem; /* Increased font size */
+            color: #5a5a5a;
+            text-align: center;
+            margin-top: 30px;
+            margin: 70px;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 100%;
+        }
+
+            .video-container video {
+                width: 100%;
+                height: 500px;
+                object-fit: cover; /* Video ko frame ke andar fit karne ke liye */
+            }
+
+        .new-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px; /* Reduced padding to decrease height */
+            background-color: #bc7f70;
+            text-align: center;
+            flex-wrap: wrap;
+            border: 1px solid #6b6836;
+            margin: 0;
+            width: 100%; /* Ensure full width */
+            box-sizing: border-box;
+            min-height: 80px; /* Reduced minimum height */
+        }
+
+            .new-section .text-content {
+                flex: 1;
+                padding: 10px;
+            }
+
+                .new-section .text-content h1 {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: #f8f8f4;
+                    margin-bottom: 20px;
+                }
+
+                .new-section .text-content p {
+                    font-size: 1.2rem;
+                    line-height: 1.8;
+                    color: #f8f8f4;
+                    margin-bottom: 20px;
+                }
+
+            .new-section img {
+                flex: 1;
+                width: 100%;
+                max-width: 500px;
+                height: 600px;
+                border-radius: 8px;
+            }
+
+        .new-button {
+            padding: 10px 20px;
+            background-color: #f8f8f4;
+            color: #6b6836;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition:0.3s ease;
+        }
+
+            .new-button:hover {
+                background-color: #a37569;
+                color: #f8f8f4;
+            }
+        .button:hover {
+            background-color: #272619;
+        }
+
+        .testimonial-section {
+            position: relative;
+            background-image: url('https://i.pinimg.com/736x/c3/85/bf/c385bfcefe7d466f4464aa280b63d97c.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px; /* Increased padding for more height */
+            min-height: 550px; /* Added minimum height */
+            width: 100%; /* Ensure full width */
+            box-sizing: border-box; /* Include padding and border in the width */
+        }
+
+
+        .testimonial-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-family: 'Cursive', sans-serif;
+            padding: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f8f8f4;
+            color: #6b6836;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+            .read-more:hover {
+                background-color: #6b6836; 
+                color: #f8f8f4;
+                
+            }
+
+       
+
+        .footer-container {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+            .logo span {
+                font-size: 1rem;
+                font-weight: normal;
+                display: block;
+            }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #a38973;
+            margin: 1.5rem 0;
+        }
+
+        .instagram-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+            .instagram-gallery img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
+        .footer-details {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            color: #8b6c5a;
+            font-size: 0.9rem;
+        }
+
+            .footer-details span {
+                font-size: 0.8rem;
+            }
+
+        .footer-logo {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .fade-in {
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Start slightly below */
+            transition: opacity 1.0s ease, transform 1.0s ease; /* Transition for opacity and position */
+        }
+
+            .fade-in.visible {
+                opacity: 1; /* Fully visible */
+                transform: translateY(0); /* Move to original position */
+            }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <h1 class="fade-in">The Wedding!</h1>
+        
+    </section>
+    
+    <div class="main-section fade-in" id="next-s2">
+        <h1 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size:1.1rem;letter-spacing:3px;color:#7c3333">Caring for Our People</h1>
+        <hr style="width: 2in; border-top: 2px solid black;">
+        
+        <p>
+            Thoughtfully crafted designs are at the heart of our habits. We ensure that every detail is tailored to create a stunning and memorable experience for you and your guests.
+        </p>
+       
+        <hr style="width: 2in; border-top: 2px solid black;">
+       
+    </div>
+
+    <section class="mid-section ">
+        <img src="https://i.pinimg.com/736x/08/2b/20/082b20b22e2cc629a0d25c7a31e1fdf2.jpg" alt="Destination Wedding" class="fade-in">
+        <div class="text-content fade-in">
+            <h1>Mayoun</h1>
+            <p>A Bridal Shower is a time for the bride-to-be to celebrate with her closest friends and family. Our event planners craft intimate yet stylish gatherings, featuring elegant decor, customized games, delightful desserts, and exquisite floral arrangements.</p>
+            <a asp-area="" asp-page="/Mehndi" class="button">Learn More</a>
+        </div>
+    </section>
+
+    <section class="mid-section">
+        <div class="text-content fade-in">
+            <h1>Mehndi</h1>
+            <p> The Mehndi ceremony is a vibrant pre-wedding event filled with music, dance, and the beauty of traditional henna art. We bring your Mehndi vision to life with stunning décor, themed setups, lively entertainment, and delicious cuisine.</p>
+            <a asp-area="" asp-page="/Mehndi" class="button">Learn More</a>
+        </div>
+        <img src="https://i.pinimg.com/736x/ee/86/94/ee8694cc28a5df95ecac9aa89ec471b8.jpg" alt="Wedding Celebration" class="fade-in">
+    </section>
+
+    <section class="mid-section ">
+        <img src="https://i.pinimg.com/736x/8a/e7/19/8ae719191a2f790c9e851e7e78386449.jpg" alt="Destination Wedding" class="fade-in">
+        <div class="text-content fade-in">
+            <h1>Bridal Shower</h1>
+            <p>A Bridal Shower is a time for the bride-to-be to celebrate with her closest friends and family. Our event planners craft intimate yet stylish gatherings, featuring elegant decor, customized games, delightful desserts, and exquisite floral arrangements.</p>
+            <a asp-area="" asp-page="/BridalShower" class="button">Learn More</a>
+        </div>
+    </section>
+
+    <section class="mid-section">
+        <div class="text-content fade-in">
+            <h1>Qawali Night</h1>
+            <p>Immerse yourself in the rich tradition of Qawwali Night, where the fusion of soulful music and spiritual melodies creates an unforgettable atmosphere. Our team curates an enchanting ambiance with candle-lit décor, traditional seating, and professional Qawwali artists who deliver mesmerizing performances.</p>
+            <a asp-area="" asp-page="/QawaliNight" class="button">Learn More</a>
+        </div>
+        <img src="https://i.pinimg.com/736x/ea/70/92/ea7092e03050b867269f495b0f853645.jpg" alt="Birthday Party" class="fade-in">
+    </section>
+
+    <section class="mid-section">
+        <img src="https://i.pinimg.com/736x/34/19/b5/3419b5746bc7ce32e2a01d9ff2cb129d.jpg" alt="Destination Wedding" class="fade-in">
+        <div class="text-content fade-in">
+            <h1>Nikkah</h1>
+            <p>The Nikkah is the most sacred and intimate part of the wedding journey. We specialize in designing serene and sophisticated Nikkah ceremonies, blending cultural traditions with contemporary elegance. From breathtaking white and gold décor to floral arches and ambient lighting, we create a setting that reflects the purity and significance of your union.</p>
+            <a asp-area="" asp-page="/Nikkah" class="button">Learn More</a>
+        </div>
+    </section>
+
+    <section class="mid-section">
+        <div class="text-content fade-in">
+            <h1>Barat</h1>
+            <p>The Barat is the most awaited event of the wedding festivities, marking the groom’s grand entrance with his family and friends. Our team crafts an opulent experience with stunning stage designs, royal walkways, luxurious floral setups, and mesmerizing lighting.</p>
+            <a asp-area="" asp-page="/Barat" class="button">Learn More</a>
+        </div>
+        <img src="https://i.pinimg.com/736x/4b/7a/7d/4b7a7d0cb0b6b6b2b3f91d41f7eab305.jpg" alt="Birthday Party" class="fade-in">
+    </section>
+
+    <section class="mid-section fade-in">
+        <img src="https://i.pinimg.com/736x/ef/1e/92/ef1e920ffed49844b48c6413d17563c9.jpg" alt="Destination Wedding" class="fade-in">
+        <div class="text-content fade-in">
+            <h1>Reception</h1>
+            <p>Conclude your wedding celebrations with a magnificent Reception that exudes elegance and sophistication. We design breathtaking setups featuring chic décor, dreamy lighting, and luxurious floral arrangements that leave a lasting impression.</p>
+            <a asp-area="" asp-page="/Reception" class="button">Learn More</a>
+        </div>
+    </section>
+
+    <div class="testimonial-section fade-in">
+        <div class="testimonial-overlay"></div>
+        <div class="testimonial-content">
+            <div class="testimonial-name">Usman & Zunaira</div>
+            <div class="testimonial-text">
+                The Eventify team take pride in turning dreams into reality. Usman and Zunaira entrusted us with planning and executing every detail of their wedding, ensuring each moment was as special as their love story.
+            </div>
+            <a href="https://tribune.com.pk/story/2325727/usman-mukhtars-wedding-festivities-begin-with-intimate-mayoun" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <div class="new-section ">
+        <div class="text-content fade-in">
+            <h1>Let us help you plan your perfect event!</h1>
+            <hr style="width: 2in; border-top: 2px solid white;margin:0 auto;">
+            <br />
+            <p>We specialize in creating stunning and memorable experiences tailored just for you. Reach out to us to start planning your next big event!</p>
+            <br />
+            <a asp-area="" asp-page="/Products/contactus" class="new-button">Get in Touch</a>
+        </div>
+        <img src="https://i.pinimg.com/736x/75/92/ad/7592ad9ba2210c75f09ff314f62f0e4d.jpg" alt="Decorative Event Image" class="fade-in">
+    </div>
+
+   
+
+    <script>
+               // Intersection Observer for fade-in effect
+               document.addEventListener("DOMContentLoaded", function() {
+                   const fadeInElements = document.querySelectorAll('.fade-in');
+
+        const observerOptions = {
+                       root: null, // Use the viewport as the root
+                       threshold: 0.1 // Trigger when 10% of the element is visible
+                   };
+
+                   const observer = new IntersectionObserver((entries) => {
+                       entries.forEach(entry => {
+                           if (entry.isIntersecting) {
+                               entry.target.classList.add('visible'); // Add visible class to trigger animation
+                               observer.unobserve(entry.target); // Stop observing once it has been animated
+                           }
+                       });
+                   }, observerOptions);
+
+                   fadeInElements.forEach(element => {
+                       observer.observe(element); // Observe each fade-in element
+                   });
+               });
+    </script>
+</body>
+</html>

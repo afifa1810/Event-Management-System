@@ -1,0 +1,102 @@
+﻿@page
+@model EventManagement.Pages.FinalContactModel
+@{
+
+}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+
+</head>
+    <body>
+        <div class="container mx-auto p-8">
+            <h2 class="text-2xl font-bold mb-6">Contact Us</h2>
+
+
+       
+        @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>@Model.SuccessMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>@Model.ErrorMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+            <form method="post" class="space-y-6"/>
+            <div>
+                   <label class="block text-sm font-semibold mb-1">Full Name:</label>
+                    <input type="text"  asp-for="FullName" class="border border-gray-300 p-2 w-full" />
+                    <span asp-validation-for="FullName" class="text-red-500" style="font-size:0.9rem;"></span>
+                </div>
+
+               
+            </div>
+           
+        <div>
+            <label class="block text-sm font-semibold mb-1">Email:</label>
+            <input type="email" asp-for="Email" class="border border-gray-300 p-2 w-full" />
+            <span asp-validation-for="Email" class="text-red-500" style="font-size:0.9rem;"></span>
+        </div>
+
+        <div>
+            <label class="block text-sm font-semibold mb-1">Phone (11 digits):</label>
+            <input type="text"  asp-for="Phone" class="border border-gray-300 p-2 w-full" />
+            <span asp-validation-for="Phone" class="text-red-500" style="font-size:0.9rem;"></span>
+        </div> 
+        <div>
+            <label class=" block text-sm font-semibold mb-1">Event Type:</label>
+            <select asp-for="EventType" class="border border-gray-300 p-2 w-full">
+                <option value="">Select an event type</option>
+                <option value="wedding">Wedding</option>
+                <option value="birthday">Birthday</option>
+            </select>
+            <span asp-validation-for="EventType" class="text-danger" style="font-size:0.9rem;"></span>
+        </div>
+
+            @* <div> *@
+            @*     <label class="col-sm-4 col-form-label">Subject</label> *@
+            @*     <div class="col-sm-8"> *@
+            @*         <select class="form-select" asp-for="Subject"> *@
+            @*             <option value="Web Development">Web Development</option> *@
+            @*             <option value="Operating System">Operating System</option> *@
+            @*             <option value="Design Analysis">Design Analysis</option> *@
+            @*             <option value="Other">Other</option> *@
+            @*         </select> *@
+            @*         <span asp-validation-for="Subject" class="text-danger"></span> *@
+            @*     </div> *@
+            @* </div> *@
+        <div>
+            <label class="block text-sm font-semibold mb-1">Message:</label>
+            <textarea  asp-for="Message" rows="4" class="border border-gray-300 p-2 w-full"></textarea>
+        </div>
+
+        <div class="flex justify-end mt-6">
+            <button type="submit" class="bg-blue-500 text-white py-2 px-6">Submit</button>
+        </div>
+
+          
+        
+    
+
+</body>
+</html>

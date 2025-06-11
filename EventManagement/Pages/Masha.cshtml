@@ -1,0 +1,204 @@
+﻿@page
+@model EventManagement.Pages.MashaModel
+@{
+	ViewData["Title"] = "Micky Mouse Gallery!";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masha and the Bear Birthday Gallery</title>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Raleway:wght@400;700&amp;display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: floralwhite;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        header {
+            position: relative;
+            z-index: 20;
+        }
+
+        .hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: white;
+            height: 80vh;
+            background: url('https://blog.venuelook.com/wp-content/uploads/2022/05/Dream-location.jpg') center/cover no-repeat; /* Replace with a Masha and the Bear image */
+        }
+
+            .hero::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 1;
+            }
+
+        .hero-text {
+            margin-left: 50px;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+            .hero-text h1 {
+                font-size: 3em;
+                margin: 0;
+                color: #f1faee;
+            }
+
+            .hero-text p {
+                font-size: 1.2em;
+                margin-top: 10px;
+                color: #ddd;
+            }
+
+        .intro {
+            padding: 40px 110px;
+            text-align: center;
+            background-color:floralwhite;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+            .intro h2 {
+                font-size: 2.0rem;
+                margin-bottom: 15px;
+                color: #e6c639;
+            }
+
+            .intro p {
+                font-size: 1.2em;
+                line-height: 1.6;
+                color: #666;
+            }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .image-box {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+            .image-box img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+                transition: transform 0.4s ease-in-out;
+            }
+
+            .image-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            }
+
+                .image-box:hover img {
+                    transform: scale(1.1);
+                }
+
+        .fade-in {
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Start slightly below */
+            transition: opacity 1.0s ease, transform 1.0s ease; /* Transition for opacity and position */
+        }
+
+            .fade-in.visible {
+                opacity: 1; /* Fully visible */
+                transform: translateY(0); /* Move to original position */
+            }
+    </style>
+</head>
+<body>
+    
+    <div class="hero fade-in">
+        <div class="hero-text">
+            <h1>Welcome to Masha's Birthday Bash!</h1>
+            <p>Join the Adventure!</p>
+        </div>
+    </div>
+    <div class="intro">
+        <br />
+        <br />
+
+        <h3 class="text-2xl fade-in" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:0.975rem;letter-spacing:8px;">
+            CELEBRATIONS!
+        </h3>
+        <h4 class="text-4xl mt-4 fade-in" style="color:#b2ad77;font-weight:200;letter-spacing:2px;font-size:2.0rem;">
+            "Masha's Birthday Bash"
+        </h4>
+        <br />
+        <hr style="width: 2in; border-top: 2px solid black;margin:0 auto;">
+        <br />
+        <p class="fade-in" style="line-height: 2; font-size: 1.0rem;">
+            Experience the joy and excitement of a Masha and the Bear birthday party!<br /> From fun games to delightful decorations, we create unforgettable memories<br /> for your little ones.
+        </p>
+        <br /><br />
+    </div>
+    <div class="gallery fade-in">
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/70/f8/0c/70f80c36601a43eeff5cb4c08a50f20d.jpg" alt="Masha and the Bear Birthday Image 1"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/2c/db/25/2cdb25fa7c6f00397f9838423f3971f7.jpg" alt="Masha and the Bear Birthday Image 2"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/474x/52/80/a1/5280a1da69af4737163e567d3d1fcf6d.jpg" alt="Masha and the Bear Birthday Image 3"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/4d/52/84/4d52846f1e75a0adc1707da9dad574ca.jpg" alt="Masha and the Bear Birthday Image 4"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/a8/03/d3/a803d3ddb41cebde8cbb015bb1e26b6b.jpg" alt="Masha and the Bear Birthday Image 5"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/474x/e8/fc/68/e8fc68b163956a3acf320d97eb86ecd9.jpg" alt="Masha and the Bear Birthday Image 6"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/4d/1f/e7/4d1fe7a0c90d0963c6796479e5b87985.jpg" alt="Masha and the Bear Birthday Image 7"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/dd/ea/82/ddea8268dbbb4f2f5ba96279462f463e.jpg" alt="Masha and the Bear Birthday Image 8"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/1c/58/2c/1c582c71851f5f6dbbb48bcd9ca256e2.jpg" alt="Masha and the Bear Birthday Image 9"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/b8/cd/32/b8cd324a3bb2c13945e269ea59e4012b.jpg" alt="Masha and the Bear Birthday Image 10"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/f6/99/71/f69971b4c297581185f77da11e6aa5f7.jpg" alt="Masha and the Bear Birthday Image 11"></div>
+        <div class="image-box" style="animation-delay: 0.1s;"><img src="https://i.pinimg.com/736x/8a/4b/6a/8a4b6abf19bc05d0fc6579b12992a879.jpg" alt="Masha and the Bear Birthday Image 12"></div>
+    </div>
+    <script>
+               // Intersection Observer for fade-in effect
+               document.addEventListener("DOMContentLoaded", function() {
+                   const fadeInElements = document.querySelectorAll('.fade-in');
+
+        const observerOptions = {
+                       root: null, // Use the viewport as the root
+                       threshold: 0.1 // Trigger when 10% of the element is visible
+                   };
+
+                   const observer = new IntersectionObserver((entries) => {
+                       entries.forEach(entry => {
+                           if (entry.isIntersecting) {
+                               entry.target.classList.add('visible'); // Add visible class to trigger animation
+                               observer.unobserve(entry.target); // Stop observing once it has been animated
+                           }
+                       });
+                   }, observerOptions);
+
+                   fadeInElements.forEach(element => {
+                       observer.observe(element); // Observe each fade-in element
+                   });
+               });
+    </script>
+</body>
+</html>

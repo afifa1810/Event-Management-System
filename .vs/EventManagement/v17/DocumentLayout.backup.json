@@ -1,0 +1,245 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\pages\\products\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\pages\\products\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\pages\\products\\contactus.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\pages\\products\\contactus.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\pages\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\pages\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\pages\\wedding.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\pages\\wedding.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\pages\\products\\schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\pages\\products\\schedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\pages\\products\\schedule.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\pages\\products\\schedule.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\pages\\privacypolicy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\pages\\privacypolicy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|c:\\users\\pmls\\desktop\\sem 5\\web\\project\\eventmanagement\\eventmanagement\\dal\\myappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E254404A-B4B9-4A6C-AE8B-D8F6DBE5A712}|EventManagement\\EventManagement.csproj|solutionrelative:eventmanagement\\dal\\myappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\appsettings.json",
+              "RelativeDocumentMoniker": "EventManagement\\appsettings.json",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\appsettings.json",
+              "RelativeToolTip": "EventManagement\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-13T03:56:35.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MyAppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\DAL\\MyAppDbContext.cs",
+              "RelativeDocumentMoniker": "EventManagement\\DAL\\MyAppDbContext.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\DAL\\MyAppDbContext.cs",
+              "RelativeToolTip": "EventManagement\\DAL\\MyAppDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T03:55:23.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "EventManagement\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Models\\Product.cs",
+              "RelativeToolTip": "EventManagement\\Models\\Product.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAuwHIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T03:54:28.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "EventManagement\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Index.cshtml",
+              "RelativeToolTip": "EventManagement\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAGQBAAAAAAAAAAAcwOEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T21:36:30.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PrivacyPolicy.cshtml",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\PrivacyPolicy.cshtml",
+              "RelativeDocumentMoniker": "EventManagement\\Pages\\PrivacyPolicy.cshtml",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\PrivacyPolicy.cshtml",
+              "RelativeToolTip": "EventManagement\\Pages\\PrivacyPolicy.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T21:35:52.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "schedule.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Products\\schedule.cshtml.cs",
+              "RelativeDocumentMoniker": "EventManagement\\Pages\\Products\\schedule.cshtml.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Products\\schedule.cshtml.cs",
+              "RelativeToolTip": "EventManagement\\Pages\\Products\\schedule.cshtml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T21:19:35.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "schedule.cshtml",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Products\\schedule.cshtml",
+              "RelativeDocumentMoniker": "EventManagement\\Pages\\Products\\schedule.cshtml",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Products\\schedule.cshtml",
+              "RelativeToolTip": "EventManagement\\Pages\\Products\\schedule.cshtml",
+              "ViewState": "AgIAADcAAAAAAAAAAAAowEAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T21:16:10.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "EventManagement\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "EventManagement\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAAAKoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T21:07:09.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Program.cs",
+              "RelativeDocumentMoniker": "EventManagement\\Program.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Program.cs",
+              "RelativeToolTip": "EventManagement\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T03:58:40.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "EventManagement\\Pages\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Privacy.cshtml",
+              "RelativeToolTip": "EventManagement\\Pages\\Privacy.cshtml",
+              "ViewState": "AgIAABgBAAAAAAAAAAAAAB8BAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T03:59:46.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Wedding.cshtml",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Wedding.cshtml",
+              "RelativeDocumentMoniker": "EventManagement\\Pages\\Wedding.cshtml",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Wedding.cshtml",
+              "RelativeToolTip": "EventManagement\\Pages\\Wedding.cshtml",
+              "ViewState": "AgIAABECAAAAAAAAAAAAAA8CAAB3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T05:09:03.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Services.cshtml",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Services.cshtml",
+              "RelativeDocumentMoniker": "EventManagement\\Pages\\Services.cshtml",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Services.cshtml",
+              "RelativeToolTip": "EventManagement\\Pages\\Services.cshtml",
+              "ViewState": "AgIAAJIBAAAAAAAAAAAAAGABAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T05:21:36.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "contactus.cshtml",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Products\\contactus.cshtml",
+              "RelativeDocumentMoniker": "EventManagement\\Pages\\Products\\contactus.cshtml",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Products\\contactus.cshtml",
+              "RelativeToolTip": "EventManagement\\Pages\\Products\\contactus.cshtml",
+              "ViewState": "AgIAADUBAAAAAAAAAAAQwEEBAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T21:06:59.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "contactus.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Products\\contactus.cshtml.cs",
+              "RelativeDocumentMoniker": "EventManagement\\Pages\\Products\\contactus.cshtml.cs",
+              "ToolTip": "C:\\Users\\PMLS\\Desktop\\Sem 5\\WEB\\project\\EventManagement\\EventManagement\\Pages\\Products\\contactus.cshtml.cs",
+              "RelativeToolTip": "EventManagement\\Pages\\Products\\contactus.cshtml.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T18:47:32.902Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

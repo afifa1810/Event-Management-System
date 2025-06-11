@@ -1,0 +1,155 @@
+﻿@page
+@model EventManagement.Pages.FAQsModel
+@{
+    ViewData["Title"] = "Frequently Asked Questions";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A - Your Event Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Raleway:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: floralwhite;
+        }
+
+        .hea {
+            background: #b2ad77;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            
+        }
+
+        h1 {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            letter-spacing: 3px;
+        }
+
+        main {
+            padding: 60px;
+            background: #ffffff;
+            max-width: 800px;
+            
+            margin:0px auto;
+           
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: black;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .faq {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .faq:last-child {
+            border-bottom: none;
+        }
+
+        .question {
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px 0;
+            font-size: 1.1rem;
+            color: #35424a;
+        }
+
+        .answer {
+            display: none;
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .answer.show {
+            display: block;
+        }
+
+        .bir {
+            text-align: center;
+            padding: 10px 0;
+            background: #b2ad77;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .thank {
+            text-align: center;
+            padding: 10px 0;
+            background: #b2ad77;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function toggleAnswer(event) {
+            const answer = event.nextElementSibling;
+            answer.classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <br />
+    <div class="hea">
+        <h1>Frequently Asked Questions</h1>
+        <p>Your guide to our wedding and birthday event management services</p>
+    </div>
+    <main>
+        <h2>Q&A Section</h2>
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">1. What services do you offer for wedding functions?</div>
+            <div class="answer">We offer a comprehensive range of services including venue selection, decoration, catering, photography, and event coordination.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">2. Can you help with themed birthday parties?</div>
+            <div class="answer">Yes! We specialize in creating customized themes for birthday parties, including decorations, activities, and catering options.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">3. How far in advance should I book your services?</div>
+            <div class="answer">We recommend booking our services at least 3-6 months in advance to ensure availability and to allow ample time for planning.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">4. Do you provide catering services?</div>
+            <div class="answer">Yes, we offer catering services with a variety of menu options to suit your preferences and dietary requirements.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">5. What is your cancellation policy?</div>
+            <div class="answer">Our cancellation policy varies depending on the services booked. Please contact us for specific details regarding your event.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">6. Can I customize my wedding package?</div>
+            <div class="answer">Absolutely! We offer customizable packages to fit your specific needs and budget. Just let us know what you're looking for!</div>
+        </div>
+        <p class="bir">Thank you for considering us for your special events!</p>
+    </main>
+    
+</body>
+</html>

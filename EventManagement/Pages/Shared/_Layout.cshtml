@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EventManagement</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/EventManagement.styles.css" asp-append-version="true" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.8);
+        
+        color:white;
+        font-weight: 400;
+        letter-spacing:2px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 0.65rem;
+        position: relative;
+    }
+
+        .nav-links a {
+            color:white;
+            text-decoration: none;
+            padding: 0.5rem 0.5rem;
+            transition: background 0.5s;
+            font-weight: 600;
+            font-size:1.0rem;
+        }
+
+            .nav-links a:hover {
+                color: #8f8d59;
+                transition: 0.3s ease-in-out;
+            }
+
+    .dropdown {
+        padding: 0.5rem 0.5rem;
+        position: relative;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+        color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: white;
+        text-decoration: none;
+    }
+
+        .dropdown-menu a:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+    .dropdown-menu {
+        display: none; /* Keep it hidden by default */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        transform: translateY(-10px); /* Start slightly above */
+        opacity: 0; /* Start invisible */
+        transition: transform 1.6s ease, opacity 0.3s ease; /* Smooth transition */
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block; /* Show the dropdown */
+        transform: translateY(0); /* Move into view */
+        opacity: 1; /* Fade in */
+    }
+    .side-menu {
+        position: fixed;
+        top: 0;
+        left: -250px; /* Start hidden off-screen */
+        width: 250px;
+        height: 100%;
+        background-color: black;
+        color: white;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: left 1.0s ease; /* Smooth transition */
+        padding-top: 60px; /* Space for back arrow */
+        z-index: 999; /* Ensure the menu is above other elements */
+        line-height:1.5;
+    }
+    .side-menu ul li{
+        line-height:1.5;
+    }
+    .side-menu ul li:hover{
+                background-color: rgba(128, 128, 128, 0.2);
+        
+    }
+    
+        .side-menu.show {
+            left: 0; /* Move into view */
+        }
+
+    .back-arrow {
+        font-size: 30px;
+        cursor: pointer;
+        padding: 8px;
+        border: none;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1001; /* Ensure the arrow is above the menu */
+        color: white;
+    }
+
+        .back-arrow.hide {
+            display: none; /* Hide back arrow when menu is closed */
+        }
+        li{
+            margin-bottom: 6px;
+        }
+
+    .footer {
+        position: relative;
+        width: 100%;
+        padding: 20px 0;
+        background-color: black;
+    }
+
+        .footer .name {
+            color: whitesmoke;
+            font-size: 25px;
+            line-height: 1;
+            padding: 2px 5%;
+        }
+
+            .footer .name p a {
+                color: whitesmoke;
+                font-size: 15px;
+            }
+
+        .footer .about {
+            font-family:Calibri;
+            color: whitesmoke;
+            padding: 5px 5%;
+            text-align: justify;
+        }
+
+            .footer .about h1 {
+                color: #eedcba;
+                font-size: 20px;
+                line-height: 1.5;
+            }
+
+            .footer .about p {
+                font-size: 14px;
+                line-height:1.5;
+            }
+
+        .footer .social {
+            text-align: center;
+            padding-bottom: 25px;
+            color: #B2456E;
+        }
+
+            .footer .social a {
+                font-size: 24px;
+                color: #FBEAE7;
+                width: 40px;
+                height: 40px;
+                line-height: 38px;
+                display: inline-block;
+                text-align: center;
+                border-radius: 50%;
+                margin: 0 8px;
+                transition: 0.3s ease;
+            }
+
+                .footer .social a:hover {
+                    
+                    color: palevioletred;
+                }
+
+        .footer ul {
+            margin-top: 0;
+            padding: 0;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+            .footer ul li a {
+                color: #FBEAE7;
+                transition: 0.3s ease;
+            }
+
+                .footer ul li a:hover {
+                    color: palevioletred;
+                }
+
+            .footer ul li {
+                display: inline-block;
+                padding: 0 15px;
+            }
+
+        .footer .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #FBEAE7;
+        }
+</style>
+<body>
+    <header class="relative z-20 " style="position: fixed;width:100%">
+        <nav>
+            <div>
+            <div class="menu-icon" id="menuIcon" style="cursor: pointer; font-size: 25px;  color: white;float:left;">&emsp;☰</div>&emsp;
+                <div class="side-menu" id="sideMenu">
+                    <button class="back-arrow hide" id="backArrow">←</button>
+                    <ul style="padding: 20px;line-height:2 " >
+                        <li style="margin-bottom:10px;"><a asp-area="" asp-page="/Index" style="color: white;">Home</a></li>
+                        <li style="margin-bottom:10px;"><a asp-area="" asp-page="/Products/schedule" style="color: white;">Schedule</a></li>
+                        @* <li style="margin-bottom:10px;"><a asp-area="" asp-page="/Services" style="color: white;">Services</a></li>                       *@
+                        <li style="margin-bottom:10px;"><a asp-area="" asp-page="/PrivacyPolicy" style="color: white;">Privacy Policy</a></li>
+                        <li style="margin-bottom:10px;"><a asp-area="" asp-page="/FAQs" style="color: white;">FAQs</a></li>
+                        <li style="margin-bottom:10px;"><a asp-area="" asp-page="/Contact" style="color: white;">Contact</a></li>
+                    </ul>
+                </div>
+                <script>
+                    const menuIcon = document.getElementById('menuIcon');
+                    const sideMenu = document.getElementById('sideMenu');
+                    const backArrow = document.getElementById('backArrow');
+
+                    // Show the side menu
+                    menuIcon.addEventListener('click', function() {
+                        sideMenu.classList.add('show');
+                       
+                        backArrow.classList.remove('hide'); // Show back arrow
+                    });
+
+                    // Hide the side menu
+                    backArrow.addEventListener('click', function() {
+                        sideMenu.classList.remove('show');
+                        menuIcon.style.display = 'block'; // Show menu icon
+                        backArrow.classList.add('hide'); // Hide back arrow
+                    });
+                </script>
+                <div class="brand" style="padding: 20px;padding: 0.5rem 0.5rem; letter-spacing:5px;float:right;" >EVENTIFY</div>
+            </div>
+            <div class="nav-links">
+                <a asp-area="" asp-page="/Index">Home</a>
+               
+                <div class="dropdown">
+                    <a href="#">What we do <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a asp-area="" asp-page="/Wedding">Weddings</a>
+                        <a asp-area="" asp-page="/Privacy">Birthdays</a>
+                    </div>
+                </div>
+                
+                <a asp-area="" asp-page="/Services">Services</a>
+                
+                <a href="tel:8885931220">
+                    <i class="fas fa-phone-alt"></i> (888) 593-1220
+                </a>
+                <a asp-area="" asp-page="/Products/contactus" style="background-color:white;color:black;" onmouseover="this.style.color='saddlebrown'; this.style.backgroundColor='antiquewhite';"
+                   onmouseout="this.style.color='black'; this.style.backgroundColor='white';">Book now</a>
+            </div>
+        </nav>
+    </header>
+    <div >
+        <main role="main" >
+            @RenderBody()
+        </main>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+   
+    <footer class="footer">
+        <div class="name">
+            <h1>Eventify</h1>
+            <br />
+            <p style="font-size:14px;">Email us: <a href="mailto:eventify23@gmail.com">eventify23@gmail.com</a></p>
+        </div>
+        
+        <div class="about" id="abt">
+            <hr><h1>About us</h1>
+            <hr>
+            <p>
+                Eventify emerged in the 2020s to meet the diverse needs of its clients in the event management industry. With a focus on creativity and excellence, the brand now offers a comprehensive range of <br />services for corporate events, weddings, and social gatherings. Additionally, Eventify has expanded its offerings to include a variety of event-related products and solutions.
+            <br /><br />Eventify is dedicated to upholding the core values of quality, customer satisfaction, innovation, and continuous improvement. These principles form the foundation upon which the brand is built.
+            <br />
+            <br />The brand provides a wide array of event management options, catering to all types of occasions and audiences, along with an extensive selection of event-related services.</p>
+            <hr>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.linkedin.com"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://www.twitter.com"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.instagram.com"><i class='bx bxl-instagram-alt'></i></a>
+        </div>
+
+        <ul class="list">
+            <li><a href="#abt">About us</a></li>
+            <li><a href="mailto:eventify23@gmail.com">Email us</a></li>
+            <li><a asp-area="" asp-page="/PrivacyPolicy">Privacy Policy</a> </li>
+        </ul>
+        <p class="copyright">&copy; 2025 Eventify | All Rights Reserved</p>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

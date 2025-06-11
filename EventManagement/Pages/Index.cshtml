@@ -1,0 +1,381 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>
+        Wedding &amp; Event Planning
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Raleway:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .slider {
+            position: relative; /* Positioning for absolute children */
+            overflow: hidden; /* Hide overflow */
+            width: 100%; /* Full width */
+            height: calc(100vh - 40px); /* Full height minus any padding */
+        }
+
+        .slide {
+            opacity: 0; /* Initially hidden */
+            transform: translateX(100%); /* Start off-screen to the right */
+            transition: opacity 0.1s ease, transform 1.0s ease; /* Transition for smooth effect */
+            position: absolute; /* Positioning to overlap slides */
+            width: 100%; /* Ensure full width */
+            height: calc(100% - 40px); /* Adjust height */
+        }
+
+            .slide.active {
+                opacity: 1; /* Fully visible */
+                transform: translateX(0); /* Move to original position */
+            }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 35px;
+            border: none;
+            padding: 20px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .arrow-left {
+            left: 20px;
+        }
+
+        .arrow-right {
+            right: 20px;
+        }
+
+        .letter {
+            display: inline-block;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .animated {
+            color: #f9f5f7; /* Gold color */
+        }
+
+        .fade-in {
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Start slightly below */
+            transition: opacity 1.5s ease, transform 1.5s ease; /* Transition for opacity and position */
+        }
+
+            .fade-in.visible {
+                opacity: 1; /* Fully visible */
+                transform: translateY(0); /* Move to original position */
+            }
+
+        #btn {
+            display: inline-block; /* Make it behave like a button */
+            padding: 10px 20px; /* Add some padding */
+            font-size: 16px; /* Font size */
+            color: white; /* Text color */
+            background-color: #5f5c3b; /* Background color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            text-align: center; /* Center text */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.5s; /* Smooth transition */
+        }
+
+            #btn:hover {
+                background-color: #4f4c2d; /* Darker background on hover */
+            }
+
+        .new-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 20px; /* Reduced padding to decrease height */
+            background-color: #caa096;
+            text-align: center;
+            flex-wrap: wrap;
+            border: 1px solid #6b6836;
+            margin: 0;
+            width: 90%; /* Ensure full width */
+            margin-left: 50px;
+            min-height: 10px; /* Reduced minimum height */
+        }
+
+            .new-section .text-content {
+                flex: 1;
+                padding: 8px 8%;
+            }
+
+                .new-section .text-content h1 {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: #f8f8f4;
+                    margin-bottom: 10px;
+                }
+
+                .new-section .text-content p {
+                    font-size: 1.2rem;
+                    line-height: 1.5;
+                    color: #f8f8f4;
+                    margin-bottom: 10px;
+                }
+
+            .new-section img {
+                padding: 5px;
+                flex: 1;
+                width: 100%;
+                max-width: 400px;
+                height: 400px;
+                border-radius: 8px;
+          
+            }
+
+        .new-button {
+            padding: 10px 20px;
+            background-color: #f8f8f4;
+            color: #a37569;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: 0.5s ease;
+        }
+        .new-button:hover{
+                background-color: #a37569;
+                color: #f8f8f4;
+        }
+        .button:hover {
+            background-color: #ca9f54;
+        }
+
+        
+    </style>
+</head>
+<body class="bg-gray-100">
+    <section class="relative h-screen bg-cover bg-center">
+        <div class="absolute inset-0 bg-black bg-opacity-80">
+            <video autoplay loop muted class="w-full h-full object-cover">
+                <source src="https://videos.pexels.com/video-files/20203969/20203969-uhd_2560_1440_30fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white fade-in">
+            <h1 class="text-4xl md:text-6xl" style=" font-family: 'Montserrat', sans-serif;font-weight: bold; font-size: calc(0.55rem +20px);width:60%;line-height:1.25;">
+                <br />Welcome to <span style="color:wheat;text-shadow:
+            -1px -1px 0 #002d06,
+             1px -1px 0 #002d06,
+            -1px  1px 0 #002d06,
+             1px  1px 0 #002d06;">EVENTIFY</span> <br />
+            </h1>
+            <p style="font-size:2.2rem; color: white;font-family:'Times New Roman', Times, serif;font-weight:bold;color:white; text-shadow:
+            -1px -1px 0 #002d06,
+             1px -1px 0 #002d06,
+            -1px  1px 0 #002d06,
+             1px  1px 0 #002d06;"><i>Where every event tells a story!</i></p>
+            <br />
+            <a href="#next-section" class="mt-8 text-2xl scroll-arrow" onmouseover="this.style.color='#002d06';"
+               onmouseout="this.style.color='white';" style="text-shadow:
+            -1px -1px 0 #002d06,
+             1px -1px 0 #002d06,
+            -1px  1px 0 #002d06,
+             1px  1px 0 #002d06;">
+                <i class="fas fa-chevron-down arrow-icon"></i>
+
+            </a>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('.scroll-arrow').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#next-section').scrollIntoView({ behavior:'smooth' });
+        });
+    </script>
+
+    <section id="next-section" class="h-screen flex flex-col justify-center items-center text-center fade-in" style="background-color: floralwhite; line-height: 1.9">
+        <br /><h2 class="text-sm tracking-widest text-black" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;letter-spacing: 4px; font-family: Calibri; font-size: 0.95rem; font-weight: 600;">
+            BASED IN ISLAMABAD BUT WORK NATIONDWIDE
+        </h2>
+        <h3 class="text-4xl mt-4" style="color: #a8a364;">
+            Wedding &amp; Event Planning
+        </h3>
+        <br />
+        <hr style="width: 2in; border-top: 2px solid black;">
+
+        <p class="text-lg text-black mt-4 max-w-2xl" style="line-height: 2; font-size: 1.0rem;">
+            From made-to-measure weddings to birthdaynevents that nurture <br />company connections, Eventify has a flair for transforming bespoke spaces <br />into unforgettable experiences.
+        </p>
+    </section>
+
+    <section class="h-screen flex items-center fade-in" style="background-color: #b2ad77;">
+        <div class="border-1 border-white w-full p-10 max-w-9xl mx-auto px-4 h-full flex items-center relative slider">
+            <div class="w-full p-10 flex flex-col md:flex-row items-center slide active">
+                <div class="md:w-1/2 p-4">
+                    <h3 class="text-2xl font-bold text-white" style="font-family: 'Times New Roman', Times, serif; font-size: 30px; letter-spacing: 5px;">Weddings</h3>
+                    <br /> <p class="text-lg text-white mt-4">
+                        Your wedding day should be a meaningful reflection of you, artfully curated from start to finish. Our Full-Service Wedding Planning is a bespoke journey where we meticulously handle every detail, from the initial concept to the final flourish.
+                    </p>
+                    <br />
+                    <a class="mt-6 px-6 py-3 text-white text-lg" id="btn" asp-area="" asp-page="/Wedding">Learn more!</a>
+                </div>
+                <div class="md:w-1/2 p-4">
+                    <img alt="A bride and groom in a beautifully decorated venue"
+                         src="https://cdn0.weddingwire.in/article/5672/original/1280/jpg/82765-nikah-ceremony-maria-atchia-photography-nikkah.jpeg"
+                         style="width: 80%; height: 450px; max-height: 600px; object-fit: cover;" />
+                </div>
+            </div>
+
+            <div class="w-full p-10 flex flex-col md:flex-row items-center slide">
+                <div class="md:w-1/2 p-4">
+                    <h3 class="text-2xl font-bold text-white" style="font-family: 'Times New Roman', Times, serif; font-size: 30px; letter-spacing: 5px;">Birthdays</h3>
+                    <br />
+                    <p class="text-lg text-white mt-4">
+                        Celebrate your milestones with a memorable birthday party experience! Our team is dedicated to making every birthday special, with personalized themes, flawless execution, and a joyful atmosphere.
+                    </p>
+                    <br />
+                    <a class="mt-6 px-6 py-3 text-white text-lg" id="btn" asp-area="" asp-page="/Privacy">Learn more!</a>
+                </div>
+                <div class="md:w-1/2 p-4">
+                    <img alt="A birthday celebration"
+                         src="https://th.bing.com/th/id/OIP.YrkCFzBCJymtF_8dxtxU2wAAAA?rs=1&pid=ImgDetMain"
+                         style="width: 80%; height: 450px; max-height: 600px; object-fit: cover;" />
+                </div>
+            </div>
+
+            <!-- Left Arrow -->
+            <button class="arrow arrow-left" id="prevSlide"> <i class="fas fa-chevron-left arrow-icon"></i></button>
+            <!-- Right Arrow -->
+            <button class="arrow arrow-right" id="nextSlide"> <i class="fas fa-chevron-right arrow-icon"></i></button>
+        </div>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        // Show the first slide
+        slides[currentSlide].classList.add('active');
+
+        document.getElementById('nextSlide').addEventListener('click', function() {
+            slides[currentSlide].classList.remove('active'); // Hide current slide
+            currentSlide = (currentSlide + 1) % slides.length; // Move to next slide
+            slides[currentSlide].classList.add('active'); // Show next slide
+        });
+
+        document.getElementById('prevSlide').addEventListener('click', function() {
+            slides[currentSlide].classList.remove('active'); // Hide current slide
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length; // Move to previous slide
+            slides[currentSlide].classList.add('active'); // Show previous slide
+        });
+    </script>
+
+    <section class="bg-gray-100 py-16 fade-in">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h3 class="text-2xl " style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:0.975rem;letter-spacing:8px;">
+                CELEBRATIONS
+            </h3>
+            <h4 class="text-4xl mt-4" style="color:#b2ad77;font-weight:200;letter-spacing:2px;font-size:2.0rem;">
+                Modern, Detailed, Experiential
+            </h4>
+            <div class="flex flex-wrap justify-center mt-8">
+                <div class="w-full md:w-1/3 p-4">
+                    <img alt="A wedding couple" class="w-full h-auto" height="600" src="https://propakistani.pk/lens/wp-content/uploads/2022/12/321302659_1463787217485285_7570726648502927435_n-819x1024.jpg" width="400" />
+                    <p class="text-lg text-white mt-4" style="background-color:#b2ad77; padding:12px 12%;letter-spacing:2px;font-size:0.95rem;">
+                        Haris &amp; Muzna
+                    </p>
+                </div>
+                <div class="w-full md:w-1/3 p-4">
+                    <img alt="A wedding ceremony" class="w-full h-auto" height="600" src="https://i.pinimg.com/474x/53/05/04/530504def24d06ed319edba1ae07a091.jpg" width="400" />
+                    <p class="text-lg text-white mt-4" style="background-color:#b2ad77; padding:12px 12%;letter-spacing:2px;font-size:0.95rem;">
+                        Muneeb &amp; Aimen
+                    </p>
+                </div>
+                <div class="w-full md:w-1/3 p-4">
+                    <img alt="A wedding couple dancing" class="w-full h-auto" height="600" src="https://th.bing.com/th/id/OIP.55yDXxR5xwsWhgo_BfjxHAHaJI?rs=1&pid=ImgDetMain" width="400" />
+                    <p class="text-lg text-white mt-4" style="background-color:#b2ad77; padding:12px 12%;letter-spacing:2px;font-size:0.95rem;">
+                        Falak &amp; Sara
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @* <section class="bg-gray-200 py-16 text-center fade-in"> *@
+        
+    @*     <p class="text-xs tracking-widest text-black " style="letter-spacing:4px;"> *@
+    @*         PRESS *@
+    @*     </p> *@
+    @*     <h2 class="text-4xl text-[#b3b09a] mt-2"> *@
+    @*         As Seen in *@
+    @*     </h2> *@
+    @*     <br> *@
+    @*     <hr style="width: 1in; border-top: 2px solid black;margin:0 auto;"> *@
+    @*     <br /> *@
+    @*     <div class="flex flex-wrap justify-center mt-8"> *@
+    @*         <img alt="Weddings logo" class="m-4" height="100" src="https://storage.googleapis.com/a1aa/image/F4Dbf_17-2FkhNjclx2ExHQlxo52vzWMAYuGM6de1TI.jpg" width="200" /> *@
+    @*         <img alt="Town &amp; Country logo" class="m-4" height="100" src="https://storage.googleapis.com/a1aa/image/oqwq8uSCrBUpjHZfFKhq0_KmbwoGrYWtTMzBuuzqS6U.jpg" width="200" /> *@
+    @*         <img alt="Southern Bride logo" class="m-4" height="100" src="https://storage.googleapis.com/a1aa/image/FeoSYmP0-bOslqk3Rr6oC_gI7iTfMINLw0cs7-pmDmU.jpg" width="200" /> *@
+    @*         <img alt="Brides logo" class="m-4" height="100" src="https://storage.googleapis.com/a1aa/image/hU512xl31tHO_O7pZZovsP-RunSIlYpjRnwF3LL05Ig.jpg" width="200" /> *@
+    @*         <img alt="Bridal Guide logo" class="m-4" height="100" src="https://storage.googleapis.com/a1aa/image/YLijJpb4-Drk-3njTwHchw6wTLHIl8w10nyIS9eDjLs.jpg" width="200" /> *@
+    @*     </div> *@
+    @* </section> *@
+
+    <section class="bg-brown-100 py-16 fade-in">
+        <div class="new-section">
+            <div class="text-content">
+                <h1>Let us help you plan your perfect event!</h1>
+                <hr style="width: 2in; border-top: 2px solid white;margin:0 auto;">
+                <br />
+                <p>We specialize in creating stunning and memorable experiences tailored just for you. Reach out to us to start planning your next big event!</p>
+                <br />
+                <a asp-area="" asp-page="/Products/contactus" class="new-button">Get in Touch</a>
+            </div>
+            <img src="https://i.pinimg.com/736x/75/92/ad/7592ad9ba2210c75f09ff314f62f0e4d.jpg" alt="Decorative Event Image">
+        </div>
+    </section>
+
+   
+    <script>
+        // Intersection Observer for fade-in effect
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observerOptions = {
+                root: null, // Use the viewport as the root
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible'); // Add visible class to trigger animation
+                        observer.unobserve(entry.target); // Stop observing once it has been animated
+                    }
+                });
+            }, observerOptions);
+
+            fadeInElements.forEach(element => {
+                observer.observe(element); // Observe each fade-in element
+            });
+        });
+    </script>
+</body>
+</html>

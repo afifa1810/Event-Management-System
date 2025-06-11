@@ -1,0 +1,132 @@
+﻿@page
+@model EventManagement.Pages.Products.scheduleModel
+@{
+    ViewData["Title"] = "Event Schedule";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Raleway:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #f9f9f9; /* Light background for the body */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section-title {
+            background-color: #b2ad77; /* Title background color */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc; /* Separator for events */
+            padding: 20px;
+            background-color: white; /* White background for event items */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        th {
+            background-color: #b2ad77; /* Title background color */
+            color: white;
+        }
+
+        .event-item h3 {
+            font-weight: bold;
+            color: #333; /* Dark text for event names */
+        }
+
+        .event-item p {
+            color: #555; /* Gray text for event details */
+        }
+    </style>
+</head>
+<body>
+    <br />
+    <br />
+    <br />
+    <div class="bg-white p-6 shadow-md  max-w-4xl mx-auto">
+        <div class="section-title">
+            <h2 style="font-size: 1.7rem; font-weight: 600;">Event Schedule</h2>
+        </div>
+
+        @if (Model != null && Model.Products.Any())
+        {
+            <table class="space-y-4">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Event Date</th>
+                        <th>Event Type</th>
+                        
+                        <th>Venue Location</th>
+                        <th>Venue Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var eventItem in Model.Products)
+                    {
+                        <tr class="event-item">
+                            <td>
+                                <h3>@eventItem.FullName</h3>
+                            </td>
+                            <td>@eventItem.EventDate</td>
+                            <td>
+                                @eventItem.EventType
+                                @if (eventItem.EventType == "wedding")
+                                {
+                                    <span>(@eventItem.WeddingFunction)</span>
+                                }
+                                else if (eventItem.EventType == "birthday")
+                                {
+                                    <span>(@eventItem.BirthdayTheme)</span>
+                                }
+                            </td>
+                           
+                            <td>
+                                @if (eventItem.location == "other")
+                                {
+                                    <span>Other</span> <!-- Display "Other" if selected -->
+                                }
+                                else if (eventItem.location == "our-venue")
+                                {
+                                    <span>@eventItem.venue</span> <!-- Display specific venue name -->
+                                }
+                            </td>
+                            <td>@eventItem.VenueType</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No events found.</p>
+        }
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+</body>
+</html>
