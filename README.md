@@ -56,7 +56,8 @@ Contact us:
 
 ![Home page](https://github.com/user-attachments/assets/17d0fbcf-31f1-4d06-81dd-c688957dfbc0)
 ![Contact us (for registering)](https://github.com/user-attachments/assets/f44378a7-c99f-42ff-a752-82c1ecade549)
-![Schedule](https://github.com/user-attachments/assets/61d4c241-5d16-4ccb-8ea9-d35a223d1420)
+![Schedule](https://github.com/user-attachments/assets/bfd3a924-3995-4649-b27e-7154b9d97c89)
+
 
 
 ---
