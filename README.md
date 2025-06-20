@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/d5542d36-d7f4-4838-a284-c92b3f61a13b)# 🎉 Event Management System
+![Home Page](https://github.com/user-attachments/assets/d5542d36-d7f4-4838-a284-c92b3f61a13b)# 
+🎉 Event Management System
 #Eventify
 This is a web-based Event Management System developed using **ASP.NET (C#)** with a **SQL Server** local database. It allows users to manage event information, see past events and register for new ones.. The project is designed to run on **localhost** and is ideal for academic or learning purposes. It is also connected to local database, on registering for any event, it can be seen in the web in my schedule.
 
@@ -23,17 +24,13 @@ This is a web-based Event Management System developed using **ASP.NET (C#)** wit
 
 ## 🚀 How to Run
 
-1. **Clone this repository**  
-   ```bash
+1. **Clone this repository**
    git clone https://github.com/afifa1810/Event-Management-System.git
-````
-
-2. **Opne in Visual studio**
-
+3. **Open in Visual Studio**
    * Open the `.sln` file
    * Make sure the database is attached via `.mdf` or setup manually via SQL script (You can watch youtube video for database connection, if not working, link : https://www.youtube.com/watch?v=va2Va-vCHpk )
 
-3. **Update your `Web.config` connection string**
+4. **Update your `Web.config` connection string**
    Replace with your SQL Server name and database name:
 
    ```xml
@@ -42,20 +39,8 @@ This is a web-based Event Management System developed using **ASP.NET (C#)** wit
    </connectionStrings>
    ```
 
-4. **Run the project**
+5. **Run the project**
    Press `F5` or click **Start** in Visual Studio to launch on localhost.
-
----
-
-## 📂 Project Structure (Example)
-
-```
-├── App_Data/           # Database files (.mdf)
-├── Pages/              # ASP.NET pages (.aspx)
-├── Scripts/            # JavaScript files
-├── Web.config          # Configuration and connection string
-├── EventManagement.sln # Solution file
-```
 
 ---
 
@@ -63,22 +48,22 @@ This is a web-based Event Management System developed using **ASP.NET (C#)** wit
 
 Project by: Afifa Nigam, Hina Saleem and Abeeha fatima
 Contact us:
-- email: afifanigam2323@gmail.com 
+- Email: afifanigam2323@gmail.com , hinasaleem424@gmail.com
 
 ---
 
 ## 📸 Screenshots (Optional)
 
-![Home Page](https://github.com/user-attachments/assets/aa6c04e3-9f14-4451-91ce-88b2e25ed9a6)
-
-
+![Home page](https://github.com/user-attachments/assets/17d0fbcf-31f1-4d06-81dd-c688957dfbc0)
+![Contact us (for registering)](https://github.com/user-attachments/assets/f44378a7-c99f-42ff-a752-82c1ecade549)
+![Schedule](https://github.com/user-attachments/assets/61d4c241-5d16-4ccb-8ea9-d35a223d1420)
 
 
 ---
 
 ## 📃 License
 
-This project is for educational purposes only.
+This project is for educational purposes only. 
 
 ---
 ```
